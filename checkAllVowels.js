@@ -8,7 +8,7 @@ function checkVowel(inputArray){
        
         for(let j=0; j < inputArray[i].length; j++) {
             let temp = []
-            if(inputArray[i+1]){
+            if(inputArray[i+1] && inputArray[j+1]){
                 if(checkIsVowel(inputArray[i][j]) && checkIsVowel(inputArray[i][j+1]) && checkIsVowel(inputArray[i+1][j]) &&  checkIsVowel(inputArray[i+1][j+1])) {
                     temp.push(inputArray[i][j], inputArray[i][j+1] , inputArray[i+1][j], inputArray[i+1][j+1])
                     output.push(temp)
@@ -42,11 +42,11 @@ function generateSquare (row,col) {
     return output
 }
 var inputArray = [
-['A', 'X', 'C', 'Y'],
+['A', 'W', 'C', 'Y'],
 ['E', 'O', 'O', 'S'],
 ['I', 'U', 'I', 'N'],
 ['M', 'Y', 'O', 'E'],
 ['P', 'D', 'A', 'I']
 ]
-
-console.log(checkVowel(generateSquare(3,3)))
+console.log(checkVowel(inputArray))
+//console.log(checkVowel(generateSquare(5,4)))
