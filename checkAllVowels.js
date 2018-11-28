@@ -3,9 +3,11 @@ function checkAllVowels(row, col) {
   var counter = 0;
   console.log(board);
 
-  for (var i = 0; i < board.length; i++) {
+  for (var i = 0; i < board.length - 1; i++) {
+    debugger;
     for (var j = 0; j < board.length; j++) {
-      if (isVowel(board[i][j]) && isVowel(board[i][j + 1]) && isVowel(board[j][i]) && isVowel(board[j][i - 1])) {
+      if (isVowel(board[i][j]) && isVowel(board[i][j + 1]) && isVowel(board[i + 1][j]) && isVowel(board[i + 1][j + 1])) {
+        // console.log('row ===', board[i][j], board[i][j + 1], '=== column ---', board[i + 1][j], board[i + 1][j + 1], counter);
         counter++;
       }
     }
@@ -35,13 +37,13 @@ function generateBoard(row, col) {
     result.push(arr);
   }
 
-  // var sample = [
-  //   ['A', 'X', 'C', 'Y'],
-  //   ['A', 'O', 'O', 'S'],
-  //   ['U', 'I', 'I', 'T'],
-  //   ['P', 'D', 'A', 'I'],
-  //   ['M', 'Y', 'O', 'E']
-  // ];
+  var sample = [
+    ['A', 'X', 'C', 'Y'],
+    ['E', 'O', 'O', 'S'],
+    ['U', 'I', 'I', 'T'],
+    ['E', 'E', 'A', 'I'],
+    ['A', 'I', 'O', 'E']
+  ];
   return result;
 }
 
