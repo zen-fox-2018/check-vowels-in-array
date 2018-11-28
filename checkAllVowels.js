@@ -20,7 +20,6 @@ function generateBoard (jumlahRow, jumlahCol){
 function vowelsBlock (board){
   // console.log(board);
   var totalBlock = 0;
-  var check = false;
   for (var i = 0; i < board.length-1; i++) {
     for (var j = 0; j < board[i].length-1; j++) {
       if (/[aiueo]/.test(board[i][j])) {
