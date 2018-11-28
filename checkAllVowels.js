@@ -14,6 +14,7 @@ function checkVowel(inputArray){
             }
         }
     }
+    console.log('ini Yang sama')
     return output
 }
 
@@ -25,6 +26,19 @@ function checkIsVowel(string){
     return false
 }
 
+function generateSquare (row,col){
+   let  output = []
+    for(let i=0; i < row; i++){
+        let outputDalam = []
+        for(let j=0; j < col; j++){
+            let randomString = String.fromCharCode(~~((Math.random() * 26 ) + 65))
+            outputDalam.push(randomString)
+        }
+        output.push(outputDalam)
+    }
+    console.log(output ,' Ini kotak random')
+    return output
+}
 var inputArray = [
 ['A', 'X', 'C', 'Y'],
 ['E', 'O', 'O', 'S'],
@@ -33,4 +47,4 @@ var inputArray = [
 ['P', 'D', 'A', 'I']
 ]
 
-console.log(checkVowel(inputArray))
+console.log(checkVowel(generateSquare(5,4)))
