@@ -43,6 +43,7 @@ function checkBlock(board) {
 }
 
 function checkAllVowels(jumlahRow, jumlahCol) {
-  return checkBlock(generateBoard(jumlahRow, jumlahCol));
+  let myResult = checkBlock(generateBoard(jumlahRow, jumlahCol));
+  return `Jumlah block data adalah ${myResult.length}`;
 }
 console.log(checkAllVowels(10,10));
