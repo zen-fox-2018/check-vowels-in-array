@@ -2,6 +2,8 @@
 
 function checkVowel(inputArray){
     var output = []
+    if(inputArray.length <=1 || inputArray[0].length <= 1)  return output //cek baris harus lebih dari 1 dan kolom lebih dari 1
+
     for(let i=0; i < inputArray.length; i++) {
        
         for(let j=0; j < inputArray[i].length; j++) {
@@ -47,4 +49,4 @@ var inputArray = [
 ['P', 'D', 'A', 'I']
 ]
 
-console.log(checkVowel(generateSquare(5,4)))
+console.log(checkVowel(generateSquare(3,3)))
